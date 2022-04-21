@@ -1,5 +1,12 @@
 package pt.esgts.brunojesus.presencas.model;
 
+/**
+ * The student model, represents a student in the repository
+ *
+ * @author Bruno Jesus
+ * @since 2022-04-21
+ * @version 1.0
+ */
 public class Student {
 
     private long id;
@@ -13,6 +20,13 @@ public class Student {
         this.name = name;
     }
 
+    /**
+     * Creates a Student instance
+     *
+     * @param id The student id
+     * @param name The student name
+     * @return The Student instance
+     */
     public static Student of(long id, String name) {
         return new Student(id, name);
     }

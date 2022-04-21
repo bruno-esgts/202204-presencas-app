@@ -11,6 +11,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Provides access to the student data, which is located on the students.csv file
+ *
+ * @author Bruno Jesus
+ * @since 2022-04-21
+ * @version 1.0
+ */
 public class StudentRepository {
 
     private final List<Student> studentList;
@@ -24,6 +31,12 @@ public class StudentRepository {
                 .toList();
     }
 
+    /**
+     * Returns a list with all students
+     *
+     * @see Student
+     * @return The list of students
+     */
     public List<Student> findAll() {
         return new ArrayList<>(studentList);
         //return Collections.unmodifiableList(studentList);

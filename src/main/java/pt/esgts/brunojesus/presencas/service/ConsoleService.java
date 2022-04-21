@@ -7,8 +7,24 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+/**
+ * Creates the attendance list based on user input from the command line
+ *
+ * @author Bruno
+ * @since 2022-04-21
+ * @version 1.0
+ */
 public class ConsoleService {
 
+    /**
+     * Creates the attendance list for the provided studentList
+     *
+     * Will ask for user input for each student
+     *
+     * @see Student
+     * @param studentList The list of students
+     * @return The attendance list
+     */
     public List<Attendance> createAttendanceList(List<Student> studentList) {
 //        final List<Attendance> attendanceList = new ArrayList<>();
 //        for (int i = 0; i < studentList.size(); i++) {
