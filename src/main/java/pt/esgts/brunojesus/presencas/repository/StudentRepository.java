@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class StudentRepository {
 
@@ -19,6 +18,7 @@ public class StudentRepository {
         studentList = loadStudentsFile()
                 .stream()
                 .map(s -> s.split(","))
+                .filter(s -> s.length > 1)
                 .map(s -> new Student(Long.parseLong(s[0]), s[1]))
                 .toList();
     }
