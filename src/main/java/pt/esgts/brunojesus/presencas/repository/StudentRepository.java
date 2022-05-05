@@ -28,6 +28,7 @@ public class StudentRepository {
                 .map(s -> s.split(","))
                 .filter(s -> s.length > 1)
                 .map(s -> new Student(Long.parseLong(s[0]), s[1]))
+                .sorted((a,b) -> (int) (a.getId() - b.getId()))
                 .toList();
     }
 
